@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Scroll while rotating the elements using html css js</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="transform" data-500="transform:scale(0) rotate(0deg);" 
+        data-1000="transform:scale(1) rotate(1440deg); opacity:1;" 
+        data-1600="" data-1700="transform:scale(5) rotate(3240deg); opacity:0;">
+            <h2>Play LUDO Online</h2>
+            <p>
+                You can play games the whole day and you can earn real money. Ludo Empire provides you the safest 
+                and most entertaining platform to play your favorite game Ludo and earn money. There is a tournament 
+                option too where you can participate and play to earn much bigger prizes. The player with the highest 
+                roll goes first then play proceeds clockwise on your turn roll the die to determine your move you must 
+                roll a six in order to move a piece out of your base.
+            </p>
+            <button class="btn">Start Playing</button>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+        <script>
+
+            var s = skrollr.init({
+                edgeStrategy: 'set',
+                easing: {
+                    WTF: Math.random,
+                    inverted: function(p){
+                        return 1-p
+                    }
+                }
+            });
+
+        </script>
+    </body>
+</html>
